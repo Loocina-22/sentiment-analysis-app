@@ -22,7 +22,7 @@ def get_sentiment_statement(score):
     elif score <= -3:
         return "Very Negative"
 
-# Enhancements for modifiers and negations
+# For modifiers and negations
 modifiers = {
     "very": 1,
     "extremely": 2,
@@ -75,7 +75,7 @@ def analyze_sentiment(input_text):
     return word_scores, overall_score, sentiment_statement
 
 # Streamlit Application
-st.title("Enhanced Sentiment Analysis Tool")
+st.title("Sentiment Analysis Tool")
 
 # Input Field
 st.subheader("Enter Text for Sentiment Analysis")
@@ -107,4 +107,4 @@ if st.button("Analyze Sentiment"):
         # Display Overall Sentiment
         st.subheader("Overall Sentiment")
         st.write(f"**Sentiment:** {sentiment_statement}")
-        st.write(f"**Score:** {overall_score}")
+        # st.write(f"**Score:** {overall_score}")
